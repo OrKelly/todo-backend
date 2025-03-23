@@ -21,3 +21,5 @@ RUN poetry config virtualenvs.create false
 RUN poetry install --no-root --no-interaction --no-ansi --with=dev
 
 COPY . /app/
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
